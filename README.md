@@ -9,3 +9,6 @@ We will try to create a ETL pipeline using easy python script and take the data 
 
 ### Step 3. Load the data to sink MongoDB
 ![Alt text](https://github.com/Stan-Leigh/simple-etl-pipeline/blob/main/Images/MongoDB%20Data.png)
+
+## CRON SCHEDULE
+*/15 * * * * job.sh
