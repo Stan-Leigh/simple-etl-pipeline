@@ -1,4 +1,4 @@
-## Creating a simple ETL data pipeline using Python script from source (MYSQL) to sink (MongoDB)
+# Creating a simple ETL data pipeline using Python script from source (MYSQL) to sink (MongoDB)
 We will try to create a ETL pipeline using easy python script and take the data from mysql, do some operations on it and then push the data to mongodb. Let’s look at different steps involved in it.
 
 ### Step 1. Extracting the data from data source MYSQL.
