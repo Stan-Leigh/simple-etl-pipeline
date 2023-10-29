@@ -1,8 +1,8 @@
-# Install required packages
-import subprocess
-import sys
+# # Install required packages
+# import subprocess
+# import sys
 
-subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+# subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
 
 # Import relevant libraries
 import os
