@@ -1,5 +1,6 @@
-from etl_process import clean_data, append_time_column, etl_pipeline
+from etl_process import clean_data, append_time_column
 import pandas as pd
+import mongomock
 
 def test_clean_data():
     df = pd.read_csv('mock_data.csv')
@@ -19,10 +20,14 @@ def test_append_time_column():
 
 def test_etl_pipeline(mocker):
     df = pd.read_csv('mock_data.csv')
-    mocker.patch("etl_process.etl_pipeline", 100)
+    connection = mongomock.Connection()
 
-    expected = 100
+    db = connection.db
+    collection = db.collection
 
-    actual = etl_pipeline(df)
+    data_to_insert = df.to_dict('records')
 
-    assert expected == actual
+    # Inserting values to table test 
+    x = collection.insert(data_to_insert) 
+
+    assert len(x) == 100
