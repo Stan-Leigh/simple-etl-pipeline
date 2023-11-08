@@ -31,3 +31,8 @@ def test_etl_pipeline(mocker):
     x = collection.insert(data_to_insert) 
 
     assert len(x) == 100
+    assert "id" in data_to_insert[0]
+    assert "email" in data_to_insert[0]
+    assert "ip_address" in data_to_insert[0]
+    assert data_to_insert[0]['first_name'] == "Demetris"
+    assert data_to_insert[0]['last_name'] == "Hoston"
